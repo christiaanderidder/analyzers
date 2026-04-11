@@ -2,4 +2,6 @@
 A collection of useful source analyzers for .NET
 
 ## Available Analyzers
-- **DeRidder.Analyzers.Xml**: Source analyzer suppressions for unavoidable issues when using XmlSerializer
+| Analyzer               | Description                                                                  | Package                                                                                                                  |
+|------------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| DeRidder.Analyzers.Xml | Source analyzer suppressions for unavoidable issues when using XmlSerializer | [![Nuget](https://img.shields.io/nuget/v/DeRidder.Analyzers.Xml)](https://www.nuget.org/packages/DeRidder.Analyzers.Xml) |
