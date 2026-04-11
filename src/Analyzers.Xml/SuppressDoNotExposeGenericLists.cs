@@ -7,12 +7,12 @@ using Microsoft.CodeAnalysis.Diagnostics;
 namespace Analyzers.Xml;
 
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
-public class AllowGenericListOnXmlModelAnalyzer : DiagnosticSuppressor
+public class SuppressDoNotExposeGenericListsForXmlSerializer : DiagnosticSuppressor
 {
     private static readonly SuppressionDescriptor Rule = new(
-        "SP0001",
+        "SP1002",
         "CA1002",
-        "Do not expose generic lists does not apply to types used by XmlSerializer. XmlSerializer requires public types and properties as well as concrete collection types."
+        "Suppress CA1002 when the type is used by XmlSerializer. XmlSerializer requires public types and properties as well as concrete collection types."
     );
 
     private static readonly ImmutableArray<string> XmlSerializerAttributes =
