@@ -18,9 +18,6 @@ jobs:
       - name: Create package
         run: dotnet pack -c Release -p:Version=${{ github.event.release.tag_name }}
 
-      - name: Publish package (GitHub)
-        run: dotnet nuget push ./artifacts/package/release/*.nupkg --api-key ${{ secrets.GH_API_KEY }} --source https://nuget.pkg.github.com/christiaanderidder/index.json
-
       - name: NuGet login (OIDC to temp API key)
         id: login
         uses: NuGet/login@v1
