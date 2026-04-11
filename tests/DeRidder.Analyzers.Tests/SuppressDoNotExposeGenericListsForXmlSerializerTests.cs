@@ -1,11 +1,11 @@
-using Analyzers.Xml;
+using DeRidder.Analyzers.Xml;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Testing;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.CodeAnalysis.Testing;
 using Microsoft.CodeQuality.Analyzers.ApiDesignGuidelines;
 
-namespace Analyzers.Tests;
+namespace DeRidder.Analyzers.Tests;
 
 internal sealed class SuppressDoNotExposeGenericListsForXmlSerializerTests
 {

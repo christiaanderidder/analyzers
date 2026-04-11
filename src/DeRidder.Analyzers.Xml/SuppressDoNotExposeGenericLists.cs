@@ -4,7 +4,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 
-namespace Analyzers.Xml;
+namespace DeRidder.Analyzers.Xml;
 
 [DiagnosticAnalyzer(LanguageNames.CSharp)]
 public class SuppressDoNotExposeGenericListsForXmlSerializer : DiagnosticSuppressor
