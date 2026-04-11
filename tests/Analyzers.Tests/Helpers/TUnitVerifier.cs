@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Testing;
 
 namespace Analyzers.Tests.Helpers;
@@ -24,7 +25,10 @@ internal sealed class TUnitVerifier : IVerifier
         throw new InvalidOperationException("Unreachable");
     }
 
-    public void LanguageIsSupported(string language) { }
+    public void LanguageIsSupported(string language) =>
+        AsyncHelper.RunSync(async () =>
+            await Assert.That(language).IsEqualTo(LanguageNames.CSharp)
+        );
 
     public void NotEmpty<T>(string collectionName, IEnumerable<T> collection) =>
         AsyncHelper.RunSync(async () => await Assert.That(collection).IsNotEmpty());
